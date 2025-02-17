@@ -1,0 +1,141 @@
+:root {
+    --shade: 2px 2px 4px rgba(0, 0, 0, 0.7)
+}
+
+html {
+    font-family: "Poppins";
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    text-shadow: var(--shade);
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+p {
+    font-size: larger;
+    color: white; 
+
+    animation-duration: 1500ms ease;
+    animation-name: questionFade;
+}
+
+button {
+    font-family: "Poppins";
+    font-size: larger;
+    color: white; 
+    background-color: #4671bd;
+    border-radius: 7px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-shadow: var(--shade);
+    box-shadow: var(--shade);
+    transition: 200ms ease;
+}
+
+button:hover{
+    scale:1.1;
+    background-color: #6591dd;
+    cursor: pointer;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #222222;
+}
+
+.top {
+    display:flex;
+    justify-content: center;
+    background-color: #4671bd;
+    width: 100%;
+    height: 50px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.questioncontainer {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputcontainer {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.triviacontainer {
+    width: 100px;
+
+}
+
+input {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--shade);
+    font-size: 25px;
+    height: 30px;
+    opacity: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+@keyframes 
+greenFade {
+    0%{
+        background-color: #77ff77;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+@keyframes 
+redFade {
+    0%{
+        background-color: #ff7777;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+@keyframes 
+questionFade {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 0%;
+    }
+    75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
