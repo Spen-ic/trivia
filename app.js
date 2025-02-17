@@ -7,7 +7,7 @@ var currentAnswer;
 
 function getNewQuestion() {
     console.log(inputBox.value);
-    fetch("/questions.json")
+    fetch("assets/questions.json")
         .then(response => response.json())
         .then(data => {
             var randomObject = data[String(Math.floor(Math.random() * 4358) + 1)];
