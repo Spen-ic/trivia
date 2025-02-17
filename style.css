@@ -15,6 +15,19 @@ h1 {
     text-shadow: var(--shade);
 }
 
+h3 {
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    text-shadow: var(--shade);
+}
+
+.timer {
+    padding-right: 50px;
+}
+
 .homebutton:hover {
     cursor: pointer;
 }
@@ -48,13 +61,44 @@ h1 {
     cursor: pointer;
 }
 
+.blitzinfo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+    height: 35px;
+}
+
 p {
+    margin: 10px;
     font-size: larger;
     text-align: center;
     color: white; 
 
     animation-duration: 1500ms ease;
     animation-name: questionFade;
+}
+
+.start {
+    font-family: "Poppins";
+    font-size: xx-large;
+    color: white; 
+    background-color: #77ff77;
+    border-radius: 7px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-shadow: var(--shade);
+    box-shadow: var(--shade);
+    transition: 200ms ease;
+}
+
+.start:hover {
+    scale:1.1;
+    background-color: #b3ffb3;
+    cursor: pointer;
 }
 
 .skip {
@@ -150,6 +194,16 @@ greenFade {
 }
 
 @keyframes 
+greenTextFade {
+    0%{
+        color: #77ff77;
+    }
+    100%{
+        color: white;
+    }
+}
+
+@keyframes 
 redFade {
     0%{
         background-color: #ff7777;
@@ -172,5 +226,24 @@ questionFade {
     }
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes 
+fadeIn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes
+fadeOut {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
     }
 }

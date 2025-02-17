@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia</title>
+    <title>Trivia: Blitz</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class = "top">
+        <div class="triviacontainer">
+            <button class="homebutton" onclick="window.location.href='index.html'">Trivia</button>
+        </div>
+        <div class ="triviacontainer">
+            <button class = "mode" onclick="window.location.href='blitz.html'">Blitz</button>
+        </div>
+    </div>
+    <div class = "center" id="startdiv">
+        <button class="start" id="startbutton">Start</button>
+    </div>
+    <div class ="blitzinfo">
+        <h3>Time: <span class="timer" id="time">0</span></h3>
+        <h3>Correct Answers: <span class="answers" id = "numanswers">0</span></h3>
+    </div>
+    <div class="questioncontainer">
+        <p id="question">Loading...</p>
+    </div>
+    <div class="inputcontainer">
+        <input id="inputbox" autocomplete="off"></input>
+    </div>
+    <div class="center">
+        <button class="skip" id="skipbutton">Skip</button>
+    </div>
+
+    <script src = "./blitz.js"></script>
 </body>
 </html>
