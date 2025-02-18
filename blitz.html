@@ -18,27 +18,39 @@
             <button class = "mode" onclick="window.location.href='blitz.html'">Blitz</button>
         </div>
     </div>
-    <div class = "center" id="pdiv">
+    <div class="center" id = "bdiv">
         <h3>Blitz</h3>
-        <p>Answer as many questions as you can in just 60 seconds.<br>You can skip questions, but it will hurt your score.</br>Punctuation never matters.</p>
+    </div>
+    <div class = "center" id="pdiv">
+        <p>Answer as many questions as you can in just 60 seconds.<br>You can skip questions, but it will hurt your score.</br></p>
     </div>
     <div class = "center" id="startdiv">
         <button class="start" id="startbutton">Start</button>
     </div>
-    <div class ="blitzinfo">
+    <div class ="blitzinfo starthidden" id="blitzinfo">
         <h3>Time: <span class="timer" id="time">60</span></h3>
         <h3>Correct Answers: <span class="answers" id = "numanswers">0</span></h3>
     </div>
-    <div class="questioncontainer">
-        <p id="question">Loading...</p>
+    <div class="questioncontainer starthidden" id="question">
+        <p>Loading...</p>
     </div>
-    <div class="inputcontainer">
-        <input id="inputbox" autocomplete="off"></input>
+    <div class="inputcontainer starthidden" id="inputdiv">
+        <input autocomplete="off" id="inputbox"></input>
     </div>
-    <div class="center">
+    <div class="center starthidden" id="skipbuttondiv">
         <button class="skip" id="skipbutton">Skip</button>
     </div>
-
+    <div class = "center starthidden" id="sqdiv">
+        <h3>Skipped Questions: <span id = "skippedquestions">0</span></h3>
+    </div>
+    <div class = "center starthidden nopadding" id="scorediv">
+        <h3 class="nopadding">Score:</h3>
+    </div>
+    <h4 class = "center starthidden nopadding" id="score">0</h4>
+    <div class="center playagain starthidden" id="playagain">
+        <button class="skip" id="playagainbutton">Play Again</button>
+    </div>
+    
     <script src = "./blitz.js"></script>
 </body>
 </html>

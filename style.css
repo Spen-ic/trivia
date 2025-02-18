@@ -16,11 +16,29 @@ h1 {
 }
 
 h3 {
-    font-size: 23px;
+    font-size: 26px;
     color: white;
     text-align: center;
     margin: 0;
     padding: 5px;
+    text-shadow: var(--shade);
+}
+
+h4 {
+    font-size: 32px;
+    color: #77ff77;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    text-shadow: var(--shade);
+}
+
+
+p {
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    margin: 0;
     text-shadow: var(--shade);
 }
 
@@ -53,7 +71,7 @@ h3 {
     border: none;
     text-align: center;
     margin: 0;
-    padding: 0px;
+    padding: 5px;
     text-shadow: var(--shade);
 }
 
@@ -146,6 +164,10 @@ body {
     padding: 5px;
     display: flex;
     justify-content: center;
+    font-size: larger;
+    text-align: center;
+    color: white; 
+    text-shadow: var(--shade);
 }
 
 .inputcontainer {
@@ -155,9 +177,17 @@ body {
 }
 
 .center {
-    padding: 15px;
+    padding: 5px;
     display: flex;
     justify-content: center;
+}
+
+.nopadding {
+    padding:0px;
+}
+
+.starthidden {
+    display: none;
 }
 
 .triviacontainer {
