@@ -64,7 +64,7 @@ while quizNumber <= highestQuiz:
             new_data = {
                 str(question_num):{
                     "question": questionObject.get_text(separator=" ", strip=True).replace("\n", " ").strip(),
-                    "answer": answerObject.get_text(separator=" ", strip=True).replace("\n", " ").strip()
+                    "answer": answerObject.get_text(separator=" ", strip=True).replace("\n", " ").strip().replace("-", " ").replace(".", "").replace("'", "").split(" / ")
                 }
             }
                 

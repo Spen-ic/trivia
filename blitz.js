@@ -31,23 +31,39 @@ function checkAnswer() {
     let input = inputBox.value;
 
     inputBox.style.backgroundColor = "white";
-    if (input.toUpperCase() == currentAnswer.toUpperCase()) {
-        inputBox.style.animation = "none";
-        void inputBox.offsetWidth;
-        questionContainer.style.animation = "none";
-        void questionContainer.offsetWidth;
-        
-        inputBox.style.animation = "greenFade 1500ms ease";
-        questionContainer.style.animation = "questionFade 800ms ease";
-        
-        numAnswers.innerHTML = parseInt(numAnswers.innerHTML) + 1;
-        numAnswers.style.animation = "none";
-        void numAnswers.offsetWidth;
-        numAnswers.style.animation = "greenTextFade 1500ms ease";
-        
-        inputBox.value = "";
-        setTimeout(getNewQuestion, 400);
+
+    for (let i = 0; i < currentAnswer.length; i++) {
+        if (input.toUpperCase() == currentAnswer[i].toUpperCase()) {
+            inputBox.style.animation = "none";
+            void inputBox.offsetWidth;
+            questionContainer.style.animation = "none";
+            void questionContainer.offsetWidth;
+            
+            inputBox.style.animation = "greenFade 1500ms ease";
+            questionContainer.style.animation = "questionFade 800ms ease";
+            
+            numAnswers.innerHTML = parseInt(numAnswers.innerHTML) + 1;
+            numAnswers.style.animation = "none";
+            void numAnswers.offsetWidth;
+            numAnswers.style.animation = "greenTextFade 1500ms ease";
+            
+            inputBox.value = "";
+            setTimeout(getNewQuestion, 400);
+            return;
+        }
     }
+}
+
+function fadeIn(element) {
+    element.style.animation = "none";
+    void element.offsetWidth;
+    element.style.animation = "fadeIn 300ms ease";
+}
+
+function fadeOut(element) {
+    element.style.animation = "none";
+    void element.offsetWidth;
+    element.style.animation = "fadeOut 300ms ease";
 }
 
 function skipQuestion() {
@@ -77,6 +93,7 @@ function startTimer() {
     setTimeout(() => {
         clearInterval(interval);
         timer.innerHTML = 0;
+        timer.parentElement.remove();
     }, 60000);
 }
 
@@ -95,9 +112,7 @@ skipButton.addEventListener("click", e => {
 })
 
 startButton.addEventListener("click", e => {
-    startButton.style.animation = "none";
-    void startButton.offsetWidth;
-    startButton.style.animation = "fadeOut 300ms ease";
+    fadeOut(startButton);
 
     startDiv.remove();
     setTimeout(() => {
@@ -115,7 +130,6 @@ startButton.addEventListener("click", e => {
         void skipButton.offsetWidth;
         skipButton.style.animation = "fadeIn 300ms ease";
         setTimeout(() => {
-            console.log("pssaed");
             inputBox.style.opacity = "100%";
             questionContainer.style.opacity = "100%";
             skipButton.style.opacity = "100%";

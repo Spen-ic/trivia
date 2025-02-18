@@ -24,17 +24,21 @@ function checkAnswer() {
     let input = inputBox.value;
 
     inputBox.style.backgroundColor = "white";
-    if (input.toUpperCase() == currentAnswer.toUpperCase()) {
-        inputBox.style.animation = "none";
-        void inputBox.offsetWidth;
-        questionContainer.style.animation = "none";
-        void questionContainer.offsetWidth;
-        
-        inputBox.style.animation = "greenFade 1500ms ease";
-        questionContainer.style.animation = "questionFade 800ms ease";
-        
-        inputBox.value = "";
-        setTimeout(getNewQuestion, 400);
+
+    for (let i = 0; i < currentAnswer.length; i++) {
+        if (input.toUpperCase() == currentAnswer[i].toUpperCase()) {
+            inputBox.style.animation = "none";
+            void inputBox.offsetWidth;
+            questionContainer.style.animation = "none";
+            void questionContainer.offsetWidth;
+            
+            inputBox.style.animation = "greenFade 1500ms ease";
+            questionContainer.style.animation = "questionFade 800ms ease";
+            
+            inputBox.value = "";
+            setTimeout(getNewQuestion, 400);
+            return;
+        }
     }
 }
 
